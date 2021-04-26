@@ -811,7 +811,7 @@ dt {
 }
 
 .topbar .topbar-left {
-  background-color: #30419b;
+  /* background-color: #30419b; */
   float: left;
   text-align: center;
   height: 70px;
