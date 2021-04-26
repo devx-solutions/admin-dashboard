@@ -1156,7 +1156,7 @@ dt {
 .side-menu {
   width: 240px;
   z-index: 10;
-  background: #30419b;
+  /* background: #30419b; */
   bottom: 0;
   margin-top: 0;
   padding-bottom: 30px;

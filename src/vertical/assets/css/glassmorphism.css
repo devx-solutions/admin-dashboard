@@ -1,0 +1,77 @@
+.glassm {
+  background: rgba(255, 255, 255, 0.25) !important;
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.glassm-border {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glassm-border-curved {
+  border-radius: 10px;
+}
+
+.glass-shadow {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glassm-bg-transparent {
+    background-color: transparent !important;
+}
+
+/* 
+ * Body Styles 
+ */
+
+.glassm-body-style-1 {
+  background: rgb(0, 18, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 18, 36, 1) 1%,
+    rgba(5, 79, 81, 1) 40%,
+    rgba(9, 102, 121, 1) 63%,
+    rgba(4, 136, 190, 1) 81%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.glassm-body-style-2 {
+  background: rgb(187, 164, 78);
+  background: linear-gradient(
+    45deg,
+    rgba(187, 164, 78, 1) 1%,
+    rgba(81, 5, 65, 1) 39%,
+    rgba(121, 9, 86, 1) 64%,
+    rgba(104, 4, 190, 1) 80%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.glassm-body-style-3 {
+  background: rgb(0, 18, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 18, 36, 1) 1%,
+    rgba(5, 79, 81, 1) 40%,
+    rgba(9, 102, 121, 1) 63%,
+    rgba(4, 136, 190, 1) 81%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+
+/* Glassmorphism Text */
+
+.text-glassm {
+  color: #d3dce7 !important;
+}
+
+/* Glassmorphism Menu */
+#sidebar-menu > ul > li > a.mm-active {
+    /* background-color: transparent !important; */
+    background: rgba(255, 255, 255, 0.25) !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+}
