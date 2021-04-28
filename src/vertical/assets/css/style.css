@@ -1057,7 +1057,6 @@ dt {
 }
 
 #sidebar-menu > ul > li > a {
-  color: #7e8cda;
   display: block;
   padding: 13px 20px;
   font-size: 14px;
@@ -1065,12 +1064,17 @@ dt {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   font-family: "Poppins", sans-serif;
+
+  text-decoration: none;
+  color: var(--theme-color);
+  font-weight: 400;
 }
 
 #sidebar-menu > ul > li > a:hover,
 #sidebar-menu > ul > li > a:focus,
 #sidebar-menu > ul > li > a:active {
-  color: #ffffff;
+  /* color: #ffffff; */
+  background-color: var(--hover-menu-bg);
   text-decoration: none;
 }
 
@@ -1090,8 +1094,8 @@ dt {
 }
 
 #sidebar-menu > ul > li > a.mm-active {
-  color: #ffffff !important;
-  background-color: #3345a5;
+  color: var(--theme-color) !important;
+  background-color: var(--active-menu-bg);
 }
 
 #sidebar-menu .menu-title {
@@ -1104,13 +1108,13 @@ dt {
 }
 
 #sidebar-menu .submenu li.mm-active > a {
-  color: #ffffff;
-  background-color: #30419b;
+  color: var(--theme-color);
+  background-color: var(--active-menu-bg);
 }
 
 #sidebar-menu .submenu li a {
   padding: 8px 20px 8px 10px;
-  color: #7e8cda;
+  color: var(--theme-color);
   display: block;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -1121,8 +1125,7 @@ dt {
 }
 
 #sidebar-menu .submenu li a:hover {
-  background-color: #30419b;
-  color: rgba(255, 255, 255, 0.8);
+  background-color: var(--hover-menu-bg);
 }
 
 #sidebar-menu .submenu > li > a {
@@ -1237,7 +1240,7 @@ dt {
 }
 
 .enlarged #wrapper .left.side-menu #sidebar-menu > ul > li:hover > ul a:hover {
-  color: #ffffff;
+  color: #c70505;
 }
 
 .enlarged #wrapper .left.side-menu #sidebar-menu > ul > li:hover a span {
@@ -2147,8 +2150,8 @@ button:focus {
 ===================*/
 .card {
   border: none;
-  -webkit-box-shadow: 0px 0px 13px 0px rgba(236, 236, 241, 0.44);
-  box-shadow: 0px 0px 13px 0px rgba(236, 236, 241, 0.44);
+  /* -webkit-box-shadow: 0px 0px 13px 0px rgba(236, 236, 241, 0.44); */
+  /* box-shadow: 0px 0px 13px 0px rgba(236, 236, 241, 0.44); */
   margin-bottom: 30px;
 }
 
@@ -2983,7 +2986,9 @@ pre[class*="language-"] {
 .table-hover tbody tr:hover,
 .table-striped tbody tr:nth-of-type(odd),
 .thead-default th {
-  background-color: #f0f4f7;
+  /* background-color: #f0f4f7; */
+  background-color: var(--hover-menu-bg);
+  color: #ffffff;
 }
 
 .table td,

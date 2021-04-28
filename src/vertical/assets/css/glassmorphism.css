@@ -1,8 +1,26 @@
+:root {
+  --theme-bg-color: rgba(16 18 27 / 40%);
+  --border-color: rgba(113 119 144 / 25%);
+  --theme-color: #f9fafb;
+  --inactive-color: rgb(113 119 144 / 78%);
+  --body-font: "Poppins", sans-serif;
+  --hover-menu-bg: rgba(12 15 25 / 30%);
+  --active-menu-bg: rgba(12 15 25 / 45%);
+  --content-title-color: #999ba5;
+  --content-bg: rgb(146 151 179 / 13%);
+  --button-inactive: rgb(249 250 251 / 55%);
+  --dropdown-bg: #21242d;
+  --dropdown-hover: rgb(42 46 60);
+  --popup-bg: rgb(22 25 37);
+  --search-bg: #14162b;
+  --overlay-bg: rgba(36, 39, 59, 0.3);
+  --scrollbar-bg: rgb(1 2 3 / 40%);
+}
+
 .glassm {
-  background: rgba(255, 255, 255, 0.25) !important;
-  background-color: rgba(255, 255, 255, 0.25) !important;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background-color: var(--theme-bg-color) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
 }
 .glassm- {
   background: rgba(255, 255, 255, 0.25) !important;
@@ -11,9 +29,9 @@
   -webkit-backdrop-filter: blur(3px);
 }
 
-
 .glassm-border {
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
+  border: none;
 }
 
 .glassm-border-curved {
@@ -82,8 +100,74 @@
   -webkit-backdrop-filter: blur(5px);
 }
 
-
 /*  Form Controls */
 .form-control::placeholder {
-    color: #e9ecf0 !important;
+  color: #e9ecf0 !important;
 }
+
+/* Buttons */
+.glassm-btn {
+  display: inline-block;
+  padding: 10px 19px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 30px;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+.glassm-btn-min-width {
+  min-width: 140px;
+}
+
+/* .glassm-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+} */
+
+.glassm-btn-success {
+  background-color: rgba(30, 240, 11, 0.199);
+  border: 1px solid rgba(30, 240, 11, 0.199);
+}
+
+.glassm-btn-success:hover {
+  background-color: rgba(30, 240, 11, 0.35);
+}
+
+.glassm-btn-danger {
+  background-color: rgba(240, 11, 11, 0.199);
+  border: 1px solid rgba(240, 11, 11, 0.199);
+}
+
+.glassm-btn-danger:hover {
+  background-color: rgba(240, 11, 11, 0.35);
+}
+
+.glassm-btn-warn {
+  background-color: rgba(240, 187, 11, 0.199);
+  border: 1px solid rgba(240, 187, 11, 0.199);
+}
+
+.glassm-btn-warn:hover {
+  background-color: rgba(240, 187, 11, 0.35);
+}
+
+.glassm-btn-material {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glassm-btn-material:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+.glassm-btn-disabled {
+  background-color: rgba(19, 18, 18, 0.199);
+  border: 1px solid rgba(19, 18, 18, 0.199);
+}
+
