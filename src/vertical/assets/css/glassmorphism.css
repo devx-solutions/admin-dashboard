@@ -1,9 +1,16 @@
 .glassm {
   background: rgba(255, 255, 255, 0.25) !important;
   background-color: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.glassm- {
+  background: rgba(255, 255, 255, 0.25) !important;
+  background-color: rgba(255, 255, 255, 0.25) !important;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
+
 
 .glassm-border {
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -18,7 +25,7 @@
 }
 
 .glassm-bg-transparent {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 /* 
@@ -37,7 +44,7 @@
   );
 }
 .glassm-body-style-2 {
-  background: rgb(187, 164, 78);
+  background: rgb(187, 164, 78) !important;
   background: linear-gradient(
     45deg,
     rgba(187, 164, 78, 1) 1%,
@@ -45,7 +52,8 @@
     rgba(121, 9, 86, 1) 64%,
     rgba(104, 4, 190, 1) 80%,
     rgba(0, 212, 255, 1) 100%
-  );
+  ) !important;
+  background-attachment: fixed !important;
 }
 .glassm-body-style-3 {
   background: rgb(0, 18, 36);
@@ -59,19 +67,23 @@
   );
 }
 
-
 /* Glassmorphism Text */
 
 .text-glassm {
-  color: #d3dce7 !important;
+  color: #f5f5f5 !important;
 }
 
 /* Glassmorphism Menu */
 #sidebar-menu > ul > li > a.mm-active {
-    /* background-color: transparent !important; */
-    background: rgba(255, 255, 255, 0.25) !important;
-    background-color: rgba(255, 255, 255, 0.25) !important;
+  /* background-color: transparent !important; */
+  background: rgba(255, 255, 255, 0.25) !important;
+  background-color: rgba(255, 255, 255, 0.25) !important;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
+
+
+/*  Form Controls */
+.form-control::placeholder {
+    color: #e9ecf0 !important;
 }
