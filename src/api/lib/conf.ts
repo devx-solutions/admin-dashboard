@@ -16,7 +16,12 @@ class App {
         this.app = express();
         this.configuration();
         this.mongoConnection.connect();
-        crypto.encrypt('Vishwajith Weerasinghe');
+        const obj = {
+            name: 'Vishwajith Weerasinghe',
+            age: 24
+        };
+        let txt = crypto.encrypt(obj);
+        console.log(crypto.decrypt(txt));
     }
 
     private configuration(): void {

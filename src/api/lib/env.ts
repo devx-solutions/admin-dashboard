@@ -9,7 +9,8 @@ enum Environments {
 const AppInfo = {
     codeName: 'DevX RESTful API',
     prefix: 'devx_admin',
-    key: '12345678'
+    key: '12345678',
+    postfixLength: 5
 };
 
 class Environment {
@@ -68,6 +69,10 @@ class Environment {
         if (AppInfo && AppInfo.key && (AppInfo.key === '' || AppInfo.key.length < 8)) {
             error = true;
             this.debug('AppInfo.key is not defined or minimum length is not found!.Please check the env.js');
+        }
+        if (AppInfo && AppInfo.postfixLength === null && AppInfo.postfixLength === undefined && AppInfo.postfixLength < 0) {
+            error = true;
+            this.debug('AppInfo.postfixLength is not defined or minimum length is not found!.Please check the env.js');
         }
         return error;
     }
