@@ -2,26 +2,24 @@ import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as bearerToken from 'express-bearer-token';
 import { Request, Response } from 'express';
-import {MongoConnection } from './mongo';
-import env from './env';
+import { MongoConnection } from './mongo';
+import env from '../env';
 import crypto from './crypto';
+import { CommonRoute } from '../routes/common.route';
 
 
 class App {
     public app: express.Application;
     private mongoConnection: MongoConnection = new MongoConnection();
+    private commonRoute: CommonRoute = new CommonRoute();
 
 
     constructor() {
         this.app = express();
         this.configuration();
         this.mongoConnection.connect();
-        const obj = {
-            name: 'Vishwajith Weerasinghe',
-            age: 24
-        };
-        let txt = crypto.encrypt(obj);
-        console.log(crypto.decrypt(txt));
+        this.commonRoute.route(this.app);
+
     }
 
     private configuration(): void {
@@ -37,7 +35,7 @@ class App {
                 'http://localhost:4200'
             ];
 
-            const origin = req.header.host;
+            const origin = req.headers.host;
 
             if (allowedOrigins.indexOf(origin) > -1) {
                 res.setHeader('Access-Control-Allow-Origin', origin);
@@ -53,8 +51,9 @@ class App {
                 req.url = req.url.substr(4);
             }
 
-
-
+            if (req.body && req.body.length && req.body.length > 0) {
+                req.body = crypto.decrypt(req.body);
+            }
 
             next();
         });

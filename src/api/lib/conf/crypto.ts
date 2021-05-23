@@ -1,7 +1,7 @@
 import * as AES from 'crypto-js/aes';
 import * as enc from 'crypto-js/enc-utf8';
 import debug from './logger';
-import env from './env';
+import env from '../env';
 
 class Security {
 

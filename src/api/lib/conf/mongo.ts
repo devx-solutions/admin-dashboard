@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import env from './env';
+import env from '../env';
 
 export class MongoConnection {
     public connect(): void {
